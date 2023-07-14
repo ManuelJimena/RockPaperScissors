@@ -15,28 +15,32 @@
   
   header {
     background-color: var(--secondary);
-    height: 25vh;
+    height: 30vh;
+ 
   }
   
   main {
     background-color: var(--secondary);
     background-image: url(public/images/background.png);
-    background-size: 80%;
-    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 65vh;
+    height: 60vh;
   }
   
   footer {
     background-color: var(--tertiary);
     height: 10vh;
+    
   }
+ 
   
   h1 {
     text-align: center;
     padding-top: 20px;
     background-color: var(--secondary);
+   
   }
 
   h2 {
@@ -47,6 +51,13 @@
     padding: 25px;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
 
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 50px;
 }
   
   p {
@@ -65,6 +76,8 @@
   }
   
   #result {
+  display: flex;
+  justify-content: center;
   color: white;
   background-color: black;
   padding: 0px;

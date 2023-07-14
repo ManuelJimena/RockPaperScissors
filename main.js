@@ -76,5 +76,3 @@ scissorsBtn.addEventListener('click', () => playGame('Tijera.'));
 resultDiv.style.color = 'white';
 playerScoreSpan.style.color = 'white';
 opponentScoreSpan.style.color = 'white';
-playerScoreSpan.style.backgroundColor = 'black';
-opponentScoreSpan.style.backgroundColor = 'black';
