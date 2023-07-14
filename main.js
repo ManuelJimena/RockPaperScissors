@@ -7,6 +7,12 @@ const scissorsBtn = document.getElementById('scissors-btn');
 const resultDiv = document.getElementById('result');
 const alexKiddImg = document.getElementById('Alex-Kidd');
 const goosekaImg = document.getElementById('Gooseka');
+const playerScoreSpan = document.getElementById('player-score');
+const opponentScoreSpan = document.getElementById('opponent-score');
+
+// Variables para el contador de victorias
+let playerScore = 0;
+let opponentScore = 0;
 
 // Función para generar la elección del oponente de forma aleatoria
 function getRandomChoice() {
@@ -34,8 +40,12 @@ function playGame(playerChoice) {
     (playerChoice === "Tijera." && opponentChoice === "Papel.")
   ) {
     resultDiv.innerHTML += "<br>¡Ganaste!";
+    playerScore++; // Incrementar el contador de victorias del jugador
+    playerScoreSpan.textContent = playerScore; // Actualizar el elemento HTML del contador del jugador
   } else {
     resultDiv.innerHTML += "<br>¡Perdiste!";
+    opponentScore++; // Incrementar el contador de victorias del oponente
+    opponentScoreSpan.textContent = opponentScore; // Actualizar el elemento HTML del contador del oponente
   }
 
   // Cambiar la imagen de Alex-Kidd según la opción seleccionada
@@ -64,3 +74,7 @@ scissorsBtn.addEventListener('click', () => playGame('Tijera.'));
 
 // Aplicar estilos al texto
 resultDiv.style.color = 'white';
+playerScoreSpan.style.color = 'white';
+opponentScoreSpan.style.color = 'white';
+playerScoreSpan.style.backgroundColor = 'black';
+opponentScoreSpan.style.backgroundColor = 'black';
