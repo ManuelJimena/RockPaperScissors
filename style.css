@@ -1,0 +1,115 @@
+:root {
+  --primary: #F4EDE4;
+  --secondary: #0800C0;
+  --tertiary: #C0C0C0;
+  --quaternary: #000000;
+  --heading-size: 25px;
+  font-family: "VT323", monospace, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background-color: var(--secondary);
+    height: 20vh;
+  }
+  
+  main {
+    background-color: var(--secondary);
+    background-image: url(./assets/images/background.png);
+background-size: 80%;
+background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 70vh;
+  }
+  
+  footer {
+    background-color: var(--tertiary);
+    height: 10vh;
+  }
+  
+  h1 {
+    text-align: center;
+    padding-top: 16px;
+  }
+  
+  p {
+    text-align: center;
+    padding-top: 32px;
+  }
+  
+  #game-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #player-choice button {
+    margin: 10px;
+  }
+  
+  #result {
+  color: white;
+  background-color: black;
+  padding: 0px;
+  font-size: 40px;
+  text-align: center;
+  height: 200px;
+}
+
+  button {
+    appearance: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  button:hover {
+    transform: scale(1.5);
+  }
+
+  .characters {
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+
+
+  }
+
+  #Alex-Kidd {
+    width: 86px;
+    height: 125px;
+    display: flex;
+    margin-top: 70px;
+    margin-left: 90px;
+  }
+
+  #Gooseka {
+    width: 100px;
+    display: flex;
+    height: 190px;
+    margin-top: 18px;
+    margin-right: 90px;
+
+  }
+
+  .manueljimena {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: none;
+  }
+
+  .github img {
+    width: 25px;
+  }
