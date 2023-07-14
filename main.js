@@ -1,10 +1,12 @@
-import './style.css'
+import './style.css';
 
 // Obtener los elementos del DOM
 const rockBtn = document.getElementById('rock-btn');
 const paperBtn = document.getElementById('paper-btn');
 const scissorsBtn = document.getElementById('scissors-btn');
 const resultDiv = document.getElementById('result');
+const alexKiddImg = document.getElementById('Alex-Kidd');
+const goosekaImg = document.getElementById('Gooseka');
 
 // Función para generar la elección del oponente de forma aleatoria
 function getRandomChoice() {
@@ -34,6 +36,24 @@ function playGame(playerChoice) {
     resultDiv.innerHTML += "<br>¡Ganaste!";
   } else {
     resultDiv.innerHTML += "<br>¡Perdiste!";
+  }
+
+  // Cambiar la imagen de Alex-Kidd según la opción seleccionada
+  if (playerChoice === "Piedra.") {
+    alexKiddImg.src = "public/images/Alex-rock.png";
+  } else if (playerChoice === "Papel.") {
+    alexKiddImg.src = "public/images/Alex-paper.png";
+  } else if (playerChoice === "Tijera.") {
+    alexKiddImg.src = "public/images/Alex-scissors.png";
+  }
+
+  // Cambiar la imagen de Gooseka según la elección del oponente
+  if (opponentChoice === "Piedra.") {
+    goosekaImg.src = "public/images/Gooseka-rock.png";
+  } else if (opponentChoice === "Papel.") {
+    goosekaImg.src = "public/images/Gooseka-paper.png";
+  } else if (opponentChoice === "Tijera.") {
+    goosekaImg.src = "public/images/Gooseka-scissors.png";
   }
 }
 

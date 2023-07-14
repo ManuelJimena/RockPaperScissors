@@ -45,6 +45,7 @@
     align-items: center;
     color: var(--primary);
     padding: 25px;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
 
 }
   
@@ -85,7 +86,7 @@
   }
 
   .characters {
-    height: 250px;
+    height: 290px;
     display: flex;
     justify-content: space-between;
     gap: 5px;
@@ -93,16 +94,16 @@
 
   #Alex-Kidd {
     width: 86px;
-    height: 125px;
+    height: 145px;
     display: flex;
-    margin: 70px 20px 0px 30px;
+    margin: 145px 20px 0px 380px;
   }
 
   #Gooseka {
     width: 100px;
     display: flex;
-    height: 190px;
-    margin: 18px 30px 0px 20px;
+    height: 160px;
+    margin: 130px 380px 0px 20px;
   }
 
   .manueljimena {
@@ -118,4 +119,73 @@
 
   .github img {
     width: 25px;
+  }
+
+  @media (max-width: 1366px) {
+    .characters {
+      height: 290px;
+      display: flex;
+      justify-content: space-between;
+      gap: 5px;
+    }
+  
+    #Alex-Kidd {
+      width: 86px;
+      height: 145px;
+      display: flex;
+      margin: 145px 20px 0px 380px;
+    }
+  
+    #Gooseka {
+      width: 100px;
+      display: flex;
+      height: 160px;
+      margin: 130px 380px 0px 20px;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .characters {
+      height: 290px;
+      display: flex;
+      justify-content: space-between;
+      gap: 5px;
+    }
+  
+    #Alex-Kidd {
+      width: 86px;
+      height: 145px;
+      display: flex;
+      margin: 145px 20px 0px 30px;
+    }
+  
+    #Gooseka {
+      width: 100px;
+      display: flex;
+      height: 160px;
+      margin: 130px 30px 0px 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .characters {
+      height: 290px;
+      display: flex;
+      justify-content: space-between;
+      gap: 5px;
+    }
+  
+    #Alex-Kidd {
+      width: 86px;
+      height: 145px;
+      display: flex;
+      margin: 145px 20px 0px 30px;
+    }
+  
+    #Gooseka {
+      width: 100px;
+      display: flex;
+      height: 160px;
+      margin: 130px 30px 0px 20px;
+    }
   }
