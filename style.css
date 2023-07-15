@@ -236,6 +236,8 @@ h3 {
     h3 {
       font-size: 45px;
       margin-top: 215px;
+      margin-left: 20px;
+      margin-right: 20px;
     }
 
     #result {
