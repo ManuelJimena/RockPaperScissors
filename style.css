@@ -35,7 +35,32 @@
     
   }
  
-  
+  .score {
+    position: relative;
+    
+  }
+
+  .playerscore {
+    position: absolute;
+  top: 0;
+  left: 0;
+  }
+
+  .opponentscore {
+    position: absolute;
+  top: 0;
+  right: 0;
+  }
+
+  #player-score,
+#opponent-score,
+.playerscore,
+.opponentscore {
+  color: white;
+  background-color: black;
+}
+
+
   h1 {
     text-align: center;
     padding-top: 20px;
@@ -50,6 +75,7 @@
     color: var(--primary);
     padding: 25px;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
+   
 
 }
 
@@ -58,6 +84,10 @@ h3 {
   justify-content: center;
   color: var(--primary);
   font-size: 50px;
+  margin-top: 250px;
+  margin-left: 200px;
+  margin-right: 200px;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
 }
   
   p {
@@ -65,10 +95,25 @@ h3 {
     padding-top: 32px;
   }
 
+  #music-toggle {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  #music-toggle img {
+    width: 50px;
+    height: 50px;
+    filter: brightness(0) invert(1);
+  }
+
   
   #game-container {
     text-align: center;
-    padding: 20px;
+
   }
   
   #player-choice button {
@@ -84,6 +129,7 @@ h3 {
   font-size: 32px;
   text-align: center;
   height: 200px;
+  margin-top: 50px;
 }
 
   button {
@@ -95,11 +141,11 @@ h3 {
   }
 
   button:hover {
-    transform: scale(1.5);
+    transform: scale(1.3);
   }
 
   .characters {
-    height: 290px;
+    height: 320px;
     display: flex;
     justify-content: space-between;
     gap: 5px;
@@ -134,14 +180,8 @@ h3 {
     width: 25px;
   }
 
-  @media (max-width: 1366px) {
-    .characters {
-      height: 290px;
-      display: flex;
-      justify-content: space-between;
-      gap: 5px;
-    }
-  
+  @media (max-width: 1024px) {
+    
     #Alex-Kidd {
       width: 86px;
       height: 145px;
@@ -154,51 +194,65 @@ h3 {
       display: flex;
       height: 160px;
       margin: 130px 380px 0px 20px;
-    }
   }
+}
 
-  @media (max-width: 1300px) {
-    .characters {
-      height: 290px;
-      display: flex;
-      justify-content: space-between;
-      gap: 5px;
-    }
+  @media (min-width: 768px) {
   
     #Alex-Kidd {
       width: 86px;
       height: 145px;
       display: flex;
-      margin: 145px 20px 0px 30px;
+      margin: 165px 40px 0px 30px;
     }
   
     #Gooseka {
       width: 100px;
       display: flex;
       height: 160px;
-      margin: 130px 30px 0px 20px;
-    }
+      margin: 150px 29px 0px 0px;
   }
-
-  @media (max-width: 768px) {
-    .characters {
-      height: 290px;
-      display: flex;
-      justify-content: space-between;
-      gap: 5px;
-    }
+    h3 {
+    display: flex;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 50px;
+    margin-top: 250px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
   
+
+  @media (max-width: 767px) {
+
     #Alex-Kidd {
       width: 86px;
       height: 145px;
       display: flex;
-      margin: 145px 20px 0px 30px;
+      margin: 165px 20px 0px 30px;
     }
   
     #Gooseka {
       width: 100px;
       display: flex;
       height: 160px;
-      margin: 130px 30px 0px 20px;
+      margin: 150px 30px 0px 20px;
+    }
+
+    h3 {
+      display: flex;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 50px;
+      margin-top: 250px;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    #result {
+      font-size: 27px;
+      height: 130px;
     }
   }
+

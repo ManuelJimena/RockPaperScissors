@@ -14,7 +14,7 @@
       content="piedra papel tijera Alex Kidd in Miracle World"
     />
     <title>Piedra, papel o tijera | Alex Kidd in Miracle World</title>
-    <link rel="icon" type="image/x-icon" href="./assets/icons/Icon.png" />
+    <link rel="icon" type="image/x-icon" href="public/icons/web-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,13 +23,18 @@
     />
   </head>
   <body>
-    <nav></nav>
+    <nav>
+    </nav>
     <header>
-
         <h1 class="banner">
           <img src="public/images/banner.png" alt="banner image" />
-        </h1>      <div class="score"></div>
-        <h3 class="playerscore">Alex Kidd: <span id="player-score">0</span></h3>
+        </h1>
+        <audio id="background-music" src="public/music/OSTAlexKidd.mp3"></audio>
+<button id="music-toggle">
+  <img src="public/icons/musicOff.png" alt="Music on/off" />
+</button>
+        <div class="score"></div>
+        <h3 class="playerscore">Alex: <span id="player-score">0</span></h3>
         <h3 class="opponentscore">
           Gooseka: <span id="opponent-score">0</span>
         </h3>

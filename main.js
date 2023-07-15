@@ -76,3 +76,22 @@ scissorsBtn.addEventListener('click', () => playGame('Tijera.'));
 resultDiv.style.color = 'white';
 playerScoreSpan.style.color = 'white';
 opponentScoreSpan.style.color = 'white';
+
+// Aplicar música
+const musicToggleBtn = document.getElementById('music-toggle');
+const backgroundMusic = document.getElementById('background-music');
+
+musicToggleBtn.addEventListener('click', () => {
+  if (backgroundMusic.paused) {
+    backgroundMusic.play();
+    musicToggleBtn.innerHTML = '<img src="public/icons/musicOn.png" alt="Msic on" />';
+  } else {
+    backgroundMusic.pause();
+    musicToggleBtn.innerHTML = '<img src="public/icons/musicOff.png" alt="Music off" />';
+  }
+});
+
+ // Vuelve a reproducir la música una vez que termine
+backgroundMusic.addEventListener('ended', () => {
+  backgroundMusic.play();
+});
