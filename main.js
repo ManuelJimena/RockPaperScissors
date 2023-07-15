@@ -174,9 +174,11 @@ function setupMusic() {
     if (backgroundMusic.paused) {
       backgroundMusic.play();
       musicToggleBtn.innerHTML = '<img src="public/icons/musicOn.png" alt="Music on" />';
+      require.context();
     } else {
       backgroundMusic.pause();
       musicToggleBtn.innerHTML = '<img src="public/icons/musicOff.png" alt="Music off" />';
+      require.context();
     }
   });
 
@@ -188,4 +190,3 @@ function setupMusic() {
 injectContent();
 setupGame();
 setupMusic();
-require.context();
