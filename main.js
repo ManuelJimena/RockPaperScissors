@@ -188,3 +188,4 @@ function setupMusic() {
 injectContent();
 setupGame();
 setupMusic();
+require.context();
