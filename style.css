@@ -8,52 +8,54 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  header {
-    border: 2px solid red;
-    background-color: var(--secondary);
-    height: 30vh;
- 
-  }
-  
-  main {
-    background-color: var(--secondary);
-    background-image: url(public/images/background.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 60vh;
-  }
-  
-  footer {
-    background-color: var(--tertiary);
-    height: 10vh;
-    
-  }
- 
-  .score {
-    position: relative;
-    
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .playerscore {
-    position: absolute;
+body {
+  background-color: var(--tertiary);
+}
+  
+header {
+  background-color: var(--secondary);
+  height: 30vh;
+}
+  
+main {
+  background-color: var(--secondary);
+  background-image: url(public/images/background.png);
+  background-size: 1920px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 58vh;
+}
+  
+footer {
+  background-color: var(--tertiary);
+  height: 10vh;
+    
+}
+ 
+.score {
+  position: relative;
+    
+}
+
+.playerscore {
+  position: absolute;
   top: 0;
   left: 0;
-  }
+}
 
-  .opponentscore {
-    position: absolute;
+.opponentscore {
+  position: absolute;
   top: 0;
   right: 0;
-  }
+}
 
-  #player-score,
+#player-score,
 #opponent-score,
 .playerscore,
 .opponentscore {
@@ -61,23 +63,19 @@
   background-color: black;
 }
 
+h1 {
+  text-align: center;
+  padding-top: 20px;
+  background-color: var(--secondary);
+}
 
-  h1 {
-    text-align: center;
-    padding-top: 20px;
-    background-color: var(--secondary);
-   
-  }
-
-  h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--primary);
-    padding: 25px;
-    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
-   
-
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary);
+  padding: 25px;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
 }
 
 h3 {
@@ -91,37 +89,37 @@ h3 {
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
 }
   
-  p {
-    text-align: center;
-    padding-top: 32px;
-  }
+p {
+  text-align: center;
+   padding-top: 32px;
+}
 
-  #music-toggle {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
+#music-toggle {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
   
-  #music-toggle img {
-    width: 50px;
-    height: 50px;
-    filter: brightness(0) invert(1);
-  }
+#music-toggle img {
+  width: 50px;
+  height: 50px;
+  filter: brightness(0) invert(1);
+}
 
   
-  #game-container {
-    text-align: center;
+#game-container {
+  text-align: center;
 
-  }
+}
   
-  #player-choice button {
-    margin: 10px;
-  }
+#player-choice button {
+  margin: 8px;
+}
   
-  #result {
+#result {
   display: flex;
   justify-content: center;
   color: white;
@@ -133,136 +131,133 @@ h3 {
   margin-top: 50px;
 }
 
-  button {
-    appearance: none;
-    border: none;
-    background: none;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
+button {
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
-  button:hover {
-    transform: scale(1.3);
-  }
+button:hover {
+  transform: scale(1.3);
+}
 
-  .characters {
-    height: 320px;
-    display: flex;
-    justify-content: space-between;
-    gap: 5px;
-  }
+.characters {
+  height: 320px;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
 
+#Alex-Kidd {
+  width: 86px;
+  height: 145px;
+  display: flex;
+  margin: 145px 20px 0px 380px;
+}
+
+#Gooseka {
+  width: 100px;
+  display: flex;
+  height: 160px;
+  margin: 130px 380px 0px 20px;
+}
+
+.manueljimena {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: none;
+}
+
+.github img {
+  width: 25px;
+}
+
+@media (max-width: 1024px) {
+    
   #Alex-Kidd {
     width: 86px;
     height: 145px;
     display: flex;
     margin: 145px 20px 0px 380px;
   }
-
+  
   #Gooseka {
     width: 100px;
     display: flex;
     height: 160px;
     margin: 130px 380px 0px 20px;
   }
+}
 
-  .manueljimena {
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-weight: 300;
+@media (min-width: 768px) {
+  
+  #Alex-Kidd {
+    width: 86px;
+    height: 145px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: none;
+    margin: 165px 40px 0px 30px;
+  }
+  
+  #Gooseka {
+    width: 100px;
+    display: flex;
+    height: 160px;
+    margin: 150px 29px 0px 0px;
   }
 
-  .github img {
-    width: 25px;
-  }
-
-  @media (max-width: 1024px) {
-    
-    #Alex-Kidd {
-      width: 86px;
-      height: 145px;
-      display: flex;
-      margin: 145px 20px 0px 380px;
-    }
-  
-    #Gooseka {
-      width: 100px;
-      display: flex;
-      height: 160px;
-      margin: 130px 380px 0px 20px;
-  }
-}
-
-  @media (min-width: 768px) {
-  
-    #Alex-Kidd {
-      width: 86px;
-      height: 145px;
-      display: flex;
-      margin: 165px 40px 0px 30px;
-    }
-  
-    #Gooseka {
-      width: 100px;
-      display: flex;
-      height: 160px;
-      margin: 150px 29px 0px 0px;
-  }
- 
 }
   
+@media (max-width: 767px) {
 
-  @media (max-width: 767px) {
-
-    #Alex-Kidd {
-      width: 86px;
-      height: 145px;
-      display: flex;
-      margin: 165px 20px 0px 30px;
-    }
+  #Alex-Kidd {
+    width: 86px;
+    height: 145px;
+    display: flex;
+    margin: 165px 20px 0px 30px;
+  }
   
-    #Gooseka {
-      width: 100px;
-      display: flex;
-      height: 160px;
-      margin: 150px 30px 0px 20px;
-    }
-
-    h3 {
-      font-size: 45px;
-      margin-top: 215px;
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-
-    #result {
-      font-size: 27px;
-      height: 170px;
-    }
-
-    button {
-      width: 90px;
-    }
-
-    button:hover {
-      transform: scale(1.2);
-    }
-
-    button img{
-      margin-right: 125px;
-      width: 90px;
-      height: 125px;
-    }
-    
-    #player-choice button {
-      height: 125px;
-    }
-
+  #Gooseka {
+    width: 100px;
+    display: flex;
+    height: 160px;
+    margin: 150px 30px 0px 20px;
   }
 
- 
+  h3 {
+    font-size: 45px;
+    margin-top: 215px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  #result {
+    font-size: 27px;
+    height: 170px;
+  }
+
+  button {
+    width: 90px;
+  }
+
+  button:hover {
+    transform: scale(1.2);
+  }
+
+  button img{
+    margin-right: 125px;
+    width: 90px;
+    height: 125px;
+  }
+    
+  #player-choice button {
+    height: 125px;
+  }
+
+}
