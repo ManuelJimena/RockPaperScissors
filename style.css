@@ -287,10 +287,6 @@ button:hover {
     width: 90px;
   }
 
-  button:hover {
-    transform: scale(1.1);
-  }
-
   button img{
     margin-right: 125px;
     width: 90px;
