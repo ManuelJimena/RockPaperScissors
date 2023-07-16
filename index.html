@@ -23,8 +23,42 @@
     />
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header>
+        <h1 class="banner">
+          <img src="public/images/banner.png" alt="banner image" />
+        </h1>
+        <audio id="background-music" src="public/music/OSTAlexKidd.mp3"></audio>
+<button id="music-toggle">
+  <img src="public/icons/musicOff.png" alt="Music on/off" />
+</button>
+        <div class="score"></div>
+        <h3 class="playerscore">Alex: <span id="player-score">0</span></h3>
+        <h3 class="opponentscore">
+          Gooseka: <span id="opponent-score">0</span>
+        </h3>
+      </div>
+    </header>
+    <main>
+      <h2>Elige piedra, papel o tijera</h2>
+      <div id="game-container">
+        <div id="player-choice">
+          <button id="rock-btn">
+            <img src="public/icons/rock.png" alt="Piedra" />
+          </button>
+          <button id="paper-btn">
+            <img src="public/icons/paper.png" alt="Papel" />
+          </button>
+          <button id="scissors-btn">
+            <img src="public/icons/scissors.png" alt="Tijera" />
+          </button>
+        </div>
+      </div>
+      <div class="characters">
+        <img id="Alex-Kidd" src="public/images/Alex.png" alt="Alex image" />
+        <div id="result"></div>
+        <img id="Gooseka" src="public/images/Gooseka.png" alt="Gooseka image" />
+      </div>
+    </main>
     <footer>
       <p class="manueljimena">
         ©2023 Powered by ManuelJimena |
