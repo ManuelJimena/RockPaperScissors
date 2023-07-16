@@ -301,4 +301,9 @@ button:hover {
     height: 118px;
   }
 
+  main {
+    background-size: 1600px;
+    height: 58vh;
+  }
+
 }
