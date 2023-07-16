@@ -220,14 +220,14 @@ button:hover {
     width: 86px;
     height: 145px;
     display: flex;
-    margin: 165px 20px 0px 30px;
+    margin: 165px 20px 0px 28px;
   }
   
   #Gooseka {
     width: 100px;
     display: flex;
     height: 160px;
-    margin: 150px 30px 0px 20px;
+    margin: 150px 28px 0px 20px;
   }
 
   h3 {
@@ -238,7 +238,7 @@ button:hover {
   }
 
   #result {
-    font-size: 27px;
+    font-size: 25px;
     height: 170px;
   }
 
@@ -258,6 +258,47 @@ button:hover {
     
   #player-choice button {
     height: 125px;
+  }
+
+}
+
+@media (max-width: 411px) {
+
+  #Alex-Kidd {
+    width: 86px;
+    height: 145px;
+    display: flex;
+    margin: 115px 20px 0px 28px;
+  }
+  
+  #Gooseka {
+    width: 100px;
+    display: flex;
+    height: 160px;
+    margin: 100px 28px 0px 20px;
+  }
+
+  #result {
+    font-size: 25px;
+    height: 160px;
+  }
+
+  button {
+    width: 90px;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+  }
+
+  button img{
+    margin-right: 125px;
+    width: 90px;
+    height: 118px;
+  }
+    
+  #player-choice button {
+    height: 118px;
   }
 
 }
