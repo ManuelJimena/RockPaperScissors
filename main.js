@@ -1,37 +1,130 @@
 import './style.css';
 
-// Obtener los elementos del DOM
-const rockBtn = document.getElementById('rock-btn');
-const paperBtn = document.getElementById('paper-btn');
-const scissorsBtn = document.getElementById('scissors-btn');
-const resultDiv = document.getElementById('result');
-const alexKiddImg = document.getElementById('Alex-Kidd');
-const goosekaImg = document.getElementById('Gooseka');
-const playerScoreSpan = document.getElementById('player-score');
-const opponentScoreSpan = document.getElementById('opponent-score');
+function injectContent() {
+  const header = document.querySelector('header');
+  const main = document.querySelector('main');
 
-// Variables para el contador de victorias
-let playerScore = 0;
-let opponentScore = 0;
+  // Crear elementos y establecer sus atributos y contenido
+  const h1 = document.createElement('h1');
+  h1.classList.add('banner');
+  const img = document.createElement('img');
+  img.src = '/images/banner.png';
+  img.alt = 'banner image';
+  h1.appendChild(img);
+  header.appendChild(h1);
 
-// Función para generar la elección del oponente de forma aleatoria
+  const audio = document.createElement('audio');
+  audio.id = 'background-music';
+  audio.src = '/music/OSTAlexKidd.mp3';
+  header.appendChild(audio);
+
+  const musicToggleBtn = document.createElement('button');
+  musicToggleBtn.id = 'music-toggle';
+  const musicToggleImg = document.createElement('img');
+  musicToggleImg.src = '/icons/musicOff.png';
+  musicToggleImg.alt = 'Music on/off';
+  musicToggleBtn.appendChild(musicToggleImg);
+  header.appendChild(musicToggleBtn);
+
+  const scoreDiv = document.createElement('div');
+  scoreDiv.classList.add('score');
+  header.appendChild(scoreDiv);
+
+  const playerScoreH3 = document.createElement('h3');
+  playerScoreH3.classList.add('playerscore');
+  playerScoreH3.textContent = 'Alex: ';
+  const playerScoreSpan = document.createElement('span');
+  playerScoreSpan.id = 'player-score';
+  playerScoreSpan.textContent = '0';
+  playerScoreH3.appendChild(playerScoreSpan);
+  header.appendChild(playerScoreH3);
+
+  const opponentScoreH3 = document.createElement('h3');
+  opponentScoreH3.classList.add('opponentscore');
+  opponentScoreH3.textContent = 'Gooseka: ';
+  const opponentScoreSpan = document.createElement('span');
+  opponentScoreSpan.id = 'opponent-score';
+  opponentScoreSpan.textContent = '0';
+  opponentScoreH3.appendChild(opponentScoreSpan);
+  header.appendChild(opponentScoreH3);
+
+  const h2 = document.createElement('h2');
+  h2.textContent = 'Elige piedra, papel o tijera';
+  main.appendChild(h2);
+
+  const gameContainerDiv = document.createElement('div');
+  gameContainerDiv.id = 'game-container';
+  main.appendChild(gameContainerDiv);
+
+  const playerChoiceDiv = document.createElement('div');
+  playerChoiceDiv.id = 'player-choice';
+  gameContainerDiv.appendChild(playerChoiceDiv);
+
+  const rockBtn = document.createElement('button');
+  rockBtn.id = 'rock-btn';
+  const rockImg = document.createElement('img');
+  rockImg.src = '/icons/rock.png';
+  rockImg.alt = 'Piedra';
+  rockBtn.appendChild(rockImg);
+  playerChoiceDiv.appendChild(rockBtn);
+
+  const paperBtn = document.createElement('button');
+  paperBtn.id = 'paper-btn';
+  const paperImg = document.createElement('img');
+  paperImg.src = '/icons/paper.png';
+  paperImg.alt = 'Papel';
+  paperBtn.appendChild(paperImg);
+  playerChoiceDiv.appendChild(paperBtn);
+
+  const scissorsBtn = document.createElement('button');
+  scissorsBtn.id = 'scissors-btn';
+  const scissorsImg = document.createElement('img');
+  scissorsImg.src = '/icons/scissors.png';
+  scissorsImg.alt = 'Tijera';
+  scissorsBtn.appendChild(scissorsImg);
+  playerChoiceDiv.appendChild(scissorsBtn);
+
+  const charactersDiv = document.createElement('div');
+  charactersDiv.classList.add('characters');
+  main.appendChild(charactersDiv);
+
+  const alexKiddImg = document.createElement('img');
+  alexKiddImg.id = 'Alex-Kidd';
+  alexKiddImg.src = '/images/Alex.png';
+  alexKiddImg.alt = 'Alex image';
+  charactersDiv.appendChild(alexKiddImg);
+
+  const resultDiv = document.createElement('div');
+  resultDiv.id = 'result';
+  charactersDiv.appendChild(resultDiv);
+
+  const goosekaImg = document.createElement('img');
+  goosekaImg.id = 'Gooseka';
+  goosekaImg.src = '/images/Gooseka.png';
+  goosekaImg.alt = 'Gooseka image';
+  charactersDiv.appendChild(goosekaImg);
+}
+
 function getRandomChoice() {
   const choices = ['Piedra.', 'Papel.', 'Tijera.'];
   const randomIndex = Math.floor(Math.random() * choices.length);
   return choices[randomIndex];
 }
 
-// Función para determinar el resultado del juego
 function playGame(playerChoice) {
   const opponentChoice = getRandomChoice();
 
-  // Mostrar las elecciones del jugador y del oponente
+  const resultDiv = document.getElementById('result');
+  const playerScoreSpan = document.getElementById('player-score');
+  const opponentScoreSpan = document.getElementById('opponent-score');
+  const alexKiddImg = document.getElementById('Alex-Kidd');
+  const goosekaImg = document.getElementById('Gooseka');
+
   resultDiv.innerHTML = `
     Elegiste: ${playerChoice}<br>
     Gooseka eligió: ${opponentChoice}
   `;
 
-  // Determinar el resultado del juego
   if (playerChoice === opponentChoice) {
     resultDiv.innerHTML += "<br>¡Empate!";
   } else if (
@@ -40,15 +133,12 @@ function playGame(playerChoice) {
     (playerChoice === "Tijera." && opponentChoice === "Papel.")
   ) {
     resultDiv.innerHTML += "<br>¡Ganaste!";
-    playerScore++; // Incrementar el contador de victorias del jugador
-    playerScoreSpan.textContent = playerScore; // Actualizar el elemento HTML del contador del jugador
+    playerScoreSpan.textContent = String(Number(playerScoreSpan.textContent) + 1);
   } else {
     resultDiv.innerHTML += "<br>¡Perdiste!";
-    opponentScore++; // Incrementar el contador de victorias del oponente
-    opponentScoreSpan.textContent = opponentScore; // Actualizar el elemento HTML del contador del oponente
+    opponentScoreSpan.textContent = String(Number(opponentScoreSpan.textContent) + 1);
   }
 
-  // Cambiar la imagen de Alex-Kidd según la opción seleccionada
   if (playerChoice === "Piedra.") {
     alexKiddImg.src = "/images/Alex-rock.png";
   } else if (playerChoice === "Papel.") {
@@ -57,7 +147,6 @@ function playGame(playerChoice) {
     alexKiddImg.src = "/images/Alex-scissors.png";
   }
 
-  // Cambiar la imagen de Gooseka según la elección del oponente
   if (opponentChoice === "Piedra.") {
     goosekaImg.src = "/images/Gooseka-rock.png";
   } else if (opponentChoice === "Papel.") {
@@ -67,31 +156,35 @@ function playGame(playerChoice) {
   }
 }
 
-// Asignar eventos a los botones
-rockBtn.addEventListener('click', () => playGame('Piedra.'));
-paperBtn.addEventListener('click', () => playGame('Papel.'));
-scissorsBtn.addEventListener('click', () => playGame('Tijera.'));
+function setupGame() {
+  const rockBtn = document.getElementById('rock-btn');
+  const paperBtn = document.getElementById('paper-btn');
+  const scissorsBtn = document.getElementById('scissors-btn');
 
-// Aplicar estilos al texto
-resultDiv.style.color = 'white';
-playerScoreSpan.style.color = 'white';
-opponentScoreSpan.style.color = 'white';
+  rockBtn.addEventListener('click', () => playGame('Piedra.'));
+  paperBtn.addEventListener('click', () => playGame('Papel.'));
+  scissorsBtn.addEventListener('click', () => playGame('Tijera.'));
+}
 
-// Aplicar música
-const musicToggleBtn = document.getElementById('music-toggle');
-const backgroundMusic = document.getElementById('background-music');
+function setupMusic() {
+  const musicToggleBtn = document.getElementById('music-toggle');
+  const backgroundMusic = document.getElementById('background-music');
 
-musicToggleBtn.addEventListener('click', () => {
-  if (backgroundMusic.paused) {
+  musicToggleBtn.addEventListener('click', () => {
+    if (backgroundMusic.paused) {
+      backgroundMusic.play();
+      musicToggleBtn.innerHTML = '<img src="/icons/musicOn.png" alt="Music on" />';
+    } else {
+      backgroundMusic.pause();
+      musicToggleBtn.innerHTML = '<img src="/icons/musicOff.png" alt="Music off" />';
+    }
+  });
+
+  backgroundMusic.addEventListener('ended', () => {
     backgroundMusic.play();
-    musicToggleBtn.innerHTML = '<img src="/icons/musicOn.png" alt="Msic on" />';
-  } else {
-    backgroundMusic.pause();
-    musicToggleBtn.innerHTML = '<img src="/icons/musicOff.png" alt="Music off" />';
-  }
-});
+  });
+}
 
- // Vuelve a reproducir la música una vez que termine
-backgroundMusic.addEventListener('ended', () => {
-  backgroundMusic.play();
-});
+injectContent();
+setupGame();
+setupMusic();
