@@ -16,31 +16,16 @@
 body {
   background-color: var(--tertiary);
 }
-  
+
+/* HEADER */
+
 header {
   background-color: var(--secondary);
   height: 30vh;
 }
-  
-main {
-  background-color: var(--secondary);
-  background-image: url(public/images/background.png);
-  background-size: 1920px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 60vh;
-}
-  
-footer {
-  background-color: var(--tertiary);
-  height: 10vh;
-    
-}
- 
+
 .score {
   position: relative;
-    
 }
 
 .playerscore {
@@ -69,6 +54,33 @@ h1 {
   background-color: var(--secondary);
 }
 
+#music-toggle {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#music-toggle img {
+  width: 50px;
+  height: 50px;
+  filter: brightness(0) invert(1);
+}
+
+/* MAIN*/
+
+main {
+  background-color: var(--secondary);
+  background-image: url(/images/background.png);
+  background-size: 1920px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 60vh;
+}
+
 h2 {
   display: flex;
   justify-content: center;
@@ -76,6 +88,26 @@ h2 {
   color: var(--primary);
   padding: 25px;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
+}
+
+#game-container {
+  text-align: center;
+}
+
+#player-choice button {
+  margin: 8px;
+}
+
+#result {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  padding: 0px;
+  font-size: 32px;
+  text-align: center;
+  height: 200px;
+  margin-top: 50px;
 }
 
 h3 {
@@ -88,47 +120,10 @@ h3 {
   margin-right: 50px;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
 }
-  
+
 p {
   text-align: center;
    padding-top: 32px;
-}
-
-#music-toggle {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-  
-#music-toggle img {
-  width: 50px;
-  height: 50px;
-  filter: brightness(0) invert(1);
-}
-
-  
-#game-container {
-  text-align: center;
-
-}
-  
-#player-choice button {
-  margin: 8px;
-}
-  
-#result {
-  display: flex;
-  justify-content: center;
-  color: white;
-  background-color: black;
-  padding: 0px;
-  font-size: 32px;
-  text-align: center;
-  height: 200px;
-  margin-top: 50px;
 }
 
 button {
@@ -164,6 +159,13 @@ button:hover {
   margin: 130px 380px 0px 20px;
 }
 
+/* FOOTER */
+
+footer {
+  background-color: var(--tertiary);
+  height: 10vh;
+}
+
 .manueljimena {
   text-transform: uppercase;
   font-size: 14px;
@@ -178,6 +180,8 @@ button:hover {
 .github img {
   width: 25px;
 }
+
+/* MEDIA QUERIES */
 
 @media (max-width: 1024px) {
     
@@ -306,8 +310,6 @@ button:hover {
     height: 55vh;
   }
 
-  footer {
-    height: 27vh;
-  }
-
 }
+
+
