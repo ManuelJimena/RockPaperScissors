@@ -306,4 +306,8 @@ button:hover {
     height: 55vh;
   }
 
+  footer {
+    height: 7vh;
+  }
+
 }
