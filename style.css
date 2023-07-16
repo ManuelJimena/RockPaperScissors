@@ -268,14 +268,14 @@ button:hover {
     width: 86px;
     height: 145px;
     display: flex;
-    margin: 115px 20px 0px 28px;
+    margin: 85px 20px 0px 28px;
   }
   
   #Gooseka {
     width: 100px;
     display: flex;
     height: 160px;
-    margin: 100px 28px 0px 20px;
+    margin: 70px 28px 0px 20px;
   }
 
   #result {
@@ -302,8 +302,8 @@ button:hover {
   }
 
   main {
-    background-size: 1600px;
-    height: 58vh;
+    background-size: 1400px;
+    height: 50vh;
   }
 
 }
