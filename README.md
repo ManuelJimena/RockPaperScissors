@@ -3,7 +3,7 @@
 
 ¡Bienvenido al juego de Piedra, Papel o Tijera inspirado en Alex Kidd in Miracle World! Este juego web te permite competir contra la computadora en una versión emocionante y nostálgica del clásico juego.
 
-![RockPaperScissors Interface](src/assets/mockuper.webp)
+![RockPaperScissors Interface](public/images/mockuper.webp)
 
 ## 📖 Índice
 
